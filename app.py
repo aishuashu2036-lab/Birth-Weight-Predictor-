@@ -35,7 +35,7 @@ def get_prediction():
 
 
 
-    with open("model/model.pkl", 'rb') as obj:
+    with open("model.pkl", 'rb') as obj:
         mymodel = pickle.load(obj)
 
         prediction = mymodel.predict(b_df)
