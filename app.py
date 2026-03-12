@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, render_template
 import pandas as pd
 import pickle
 
-app = Flask("__name__")
+app = Flask(__name__)
 
 @app.route('/', methods = ["GET"])
 def home():
