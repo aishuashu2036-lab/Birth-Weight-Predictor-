@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Predict Birth Weight</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Beach background */
+    background-image:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size:cover;
+    background-position:center;
+
+    /* center form */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Form container */
+.form-container{
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+
+    padding:40px;
+    border-radius:15px;
+
+    width:320px;
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+
+    border:1px solid rgba(255,255,255,0.4);
+}
+
+/* Title */
+h1{
+    text-align:center;
+    color:#0077b6;
+}
+
+/* labels */
+label{
+    font-weight:bold;
+    color:#023e8a;
+}
+
+/* input fields */
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#f1faff;
+}
+
+/* button */
+button{
+
+    width:100%;
+    padding:12px;
+
+    background:#00b4d8;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:16px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0077b6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h1>Predict Birth Weight Of Child</h1>
+
+<form action="/predict" method="POST">
+
+<label>Gestation</label>
+<input name="gestation" type="number">
+
+<label>Parity</label>
+<input name="parity" type="number">
+
+<label>Age</label>
+<input name="age" type="number">
+
+<label>Height</label>
+<input name="height" type="number">
+
+<label>Weight</label>
+<input name="weight" type="number">
+
+<label>Smoke</label>
+<input name="smoke" type="number">
+
+<button type="submit">Predict Birth Weight</button><br><br>
+
+</form>
+<h3>The predicted Birth wieight : {{response}}</h3><br>
+
+</div>
+
+</body>
+</html>
